@@ -1,0 +1,27 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ template "title" . }}</title>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="shortcut icon"
+              href="/static/img/favicon.ico"
+              type="image/x-icon">
+    </head>
+    <body>
+        <header class="container">
+            <h3>Basic Informational Site</h3>
+            {{ template "nav" . }}
+        </header>
+        <main class="container">
+            {{ template "main" . }}
+        </main>
+        <section class="container">
+            {{ template "footer" . }}
+        </section>
+    </body>
+</html>
+{{ end }}
